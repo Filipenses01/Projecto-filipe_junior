@@ -136,6 +136,39 @@
                 font-size: 14px;
             }
         }
+
+        /* Novas seções de entretenimento */
+        .game-section {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .game-title {
+            color: #35424a;
+            font-size: 24px;
+        }
+
+        .game-description {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .game-button {
+            padding: 12px 18px;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+
+        .game-button:hover {
+            background-color: #c0392b;
+        }
     </style>
 </head>
 <body>
@@ -191,6 +224,13 @@
             </form>
         </section>
 
+        <!-- Seção de entretenimento -->
+        <section class="game-section">
+            <h2 class="game-title">Jogo Interativo: Adivinha o Número</h2>
+            <p class="game-description">Participe de um jogo onde você tem que adivinhar o número secreto entre 1 e 100!</p>
+            <button class="game-button" onclick="startGame()">Começar Jogo</button>
+        </section>
+
         <section>
             <h2>Junte-se a Nós!</h2>
             <p>Quer se tornar um parceiro ou saber mais sobre nossos cursos? Clique no botão abaixo para mais informações.</p>
@@ -201,5 +241,33 @@
     <footer>
         <p>&copy; 2025 Filipe Jr. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        function startGame() {
+            const numberToGuess = Math.floor(Math.random() * 100) + 1;
+            let attempts = 0;
+            let guess;
+
+            while (guess !== numberToGuess) {
+                guess = prompt("Adivinhe o número entre 1 e 100:");
+
+                // Verifica se o usuário clicou em "Cancelar"
+                if (guess === null) {
+                    alert("Você cancelou o jogo.");
+                    break; // Sai do loop
+                }
+
+                attempts++;
+
+                if (guess < numberToGuess) {
+                    alert("Muito baixo! Tente novamente.");
+                } else if (guess > numberToGuess) {
+                    alert("Muito alto! Tente novamente.");
+                } else {
+                    alert(`Parabéns! Você acertou o número em ${attempts} tentativas.`);
+                }
+            }
+        }
+    </script>
 </body>
 </html>
