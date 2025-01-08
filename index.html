@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo ao Projeto do Filipe Jr!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #35424a, #2c3e50);
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            background: #ffffff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #35424a;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #35424a;
+            color: #ffffff;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input, textarea, select {
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 80%;
+            max-width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #35424a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2c3e50;
+        }
+
+        .login-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .login-buttons button {
+            width: 140px;
+            background: #ffffff;
+            color: #333;
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            font-size: 14px;
+        }
+
+        .login-buttons button:hover {
+            background: #e6e6e6;
+        }
+
+        .info-box {
+            background: #f9f9f9;
+            padding: 10px;
+            border-left: 5px solid #35424a;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+
+        .cta-button {
+            padding: 12px 18px;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            background-color: #c0392b;
+        }
+
+        /* Responsividade para dispositivos móveis */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            section {
+                padding: 15px;
+            }
+
+            input, textarea, select {
+                width: 90%;
+            }
+
+            .cta-button {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Projeto do Filipe Jr!</h1>
+        <p>Explorando, aprendendo e criando soluções digitais.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Sobre o Projeto</h2>
+            <p>Este site é um projeto de teste em desenvolvimento. O objetivo é aprender mais sobre a criação de sites e funcionalidades interativas. Futuramente, queremos criar um site com recursos úteis e inovadores.</p>
+            <div class="info-box">
+                <strong>Aviso:</strong> Este site é seguro e não coleta informações sensíveis. Ele está sendo desenvolvido como parte de um estudo pessoal.
+            </div>
+        </section>
+
+        <section>
+            <h2>Inscreva-se!</h2>
+            <form action="https://formspree.io/f/mzzzkqlj" method="POST">
+                <input type="email" name="email" placeholder="Seu e-mail" required aria-label="Digite seu e-mail">
+                <button type="submit">Inscrever-se</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Deixe seu Feedback</h2>
+            <form action="https://formspree.io/f/mzzzkqlj" method="POST">
+                <input type="text" name="nome" placeholder="Seu nome" required aria-label="Digite seu nome">
+                <textarea name="mensagem" rows="5" placeholder="Escreva sua mensagem" required aria-label="Escreva sua mensagem"></textarea>
+                <select name="tipo-feedback" aria-label="Escolha o tipo de feedback">
+                    <option value="sugestao">Sugestão</option>
+                    <option value="duvida">Dúvida</option>
+                    <option value="elogio">Elogio</option>
+                </select>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Pesquisa de Satisfação</h2>
+            <form action="https://formspree.io/f/mzzzkqlj" method="POST">
+                <label for="satisfacao">Como você avalia o conteúdo do site?</label>
+                <select name="satisfacao" id="satisfacao" required aria-label="Avalie o conteúdo do site">
+                    <option value="excelente">Excelente</option>
+                    <option value="bom">Bom</option>
+                    <option value="regular">Regular</option>
+                    <option value="ruim">Ruim</option>
+                </select>
+                <label for="melhorias">O que você acha que pode melhorar no site?</label>
+                <textarea name="melhorias" rows="5" placeholder="Escreva suas sugestões" required aria-label="Sugira melhorias"></textarea>
+                <button type="submit">Enviar Pesquisa</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Junte-se a Nós!</h2>
+            <p>Quer se tornar um parceiro ou saber mais sobre nossos cursos? Clique no botão abaixo para mais informações.</p>
+            <a href="informações.html" class="cta-button">Saiba Mais</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Filipe Jr. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
